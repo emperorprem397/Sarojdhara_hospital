@@ -1,216 +1,116 @@
-/* ================================================================
-   DR. SAROJDHARA HOSPITAL — main.js v2
-   Upgraded for new creative design
-   ================================================================ */
+/* DR. SAROJDHARA HOSPITAL — main.js v3 */
 
-// ── CURSOR GLOW ──
-const cursorGlow = document.getElementById('cursorGlow');
-document.addEventListener('mousemove', e => {
-  cursorGlow.style.left = e.clientX + 'px';
-  cursorGlow.style.top  = e.clientY + 'px';
-});
-
-// ── NAVBAR SCROLL ──
+// ── NAVBAR ──
 const navbar = document.getElementById('navbar');
-const backTop = document.getElementById('backTop');
+const topFab  = document.getElementById('topFab');
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
-  backTop.classList.toggle('show', window.scrollY > 500);
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+  topFab.classList.toggle('show', window.scrollY > 400);
 });
 
-// ── HAMBURGER ──
-const navBurger = document.getElementById('navBurger');
-const navMenu   = document.getElementById('navMenu');
-navBurger.addEventListener('click', () => {
-  navMenu.classList.toggle('open');
-  const spans = navBurger.querySelectorAll('span');
-  navMenu.classList.contains('open')
-    ? (spans[0].style.transform = 'rotate(45deg) translate(5px,5px)',
-       spans[1].style.opacity = '0',
-       spans[2].style.transform = 'rotate(-45deg) translate(5px,-5px)')
-    : (spans[0].style.transform = '',
-       spans[1].style.opacity = '',
-       spans[2].style.transform = '');
+// ── BURGER ──
+const burger   = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+burger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  const s = burger.querySelectorAll('span');
+  if (navLinks.classList.contains('open')) {
+    s[0].style.transform = 'rotate(45deg) translate(5px,5px)';
+    s[1].style.opacity   = '0';
+    s[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
+  } else {
+    s.forEach(x => { x.style.transform = ''; x.style.opacity = ''; });
+  }
 });
-document.querySelectorAll('.nm-link, .nav-book').forEach(l =>
-  l.addEventListener('click', () => {
-    navMenu.classList.remove('open');
-    navBurger.querySelectorAll('span').forEach(s => {
-      s.style.transform = ''; s.style.opacity = '';
-    });
-  })
-);
+document.querySelectorAll('.nl').forEach(l => l.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  burger.querySelectorAll('span').forEach(x => { x.style.transform = ''; x.style.opacity = ''; });
+}));
 
 // ── SMOOTH SCROLL ──
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      window.scrollTo({ top: target.offsetTop - 75, behavior: 'smooth' });
-    }
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - 68, behavior: 'smooth' }); }
   });
 });
 
-// ── SCROLL REVEAL (IntersectionObserver) ──
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const el    = entry.target;
-      const delay = parseFloat(el.dataset.delay || 0) * 80;
-      setTimeout(() => el.classList.add('reveal-in'), delay);
-      revealObserver.unobserve(el);
+// ── SCROLL REVEAL ──
+const ro = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('show'), i * 70);
+      ro.unobserve(e.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-// Observe all reveal-able elements
-document.querySelectorAll(
-  '.stat-item, .sb-card, .wg-item, .gm-item, .tc, .bc'
-).forEach((el, i) => {
-  el.dataset.delay = el.dataset.delay || i;
-  revealObserver.observe(el);
-});
+}, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.rv').forEach(el => ro.observe(el));
 
 // ── STATS COUNTER ──
-function runCounters() {
-  document.querySelectorAll('.stat-item').forEach(item => {
-    const numEl  = item.querySelector('.si-num');
-    const target = parseFloat(item.dataset.target);
-    const suffix = item.dataset.suffix || '';
-    const text   = item.dataset.text;
-
-    if (text) { numEl.textContent = text; return; }
-    if (!target) return;
-
-    const isDecimal = target % 1 !== 0;
-    const duration  = 2000;
-    const steps     = 80;
-    let   count     = 0;
-
+const so = new IntersectionObserver(entries => {
+  if (!entries[0].isIntersecting) return;
+  document.querySelectorAll('.s-item').forEach(item => {
+    const el  = item.querySelector('.s-num');
+    const tgt = parseFloat(item.dataset.target);
+    const sfx = item.dataset.suffix || '';
+    const txt = item.dataset.text;
+    if (txt) { el.textContent = txt; return; }
+    if (!tgt) return;
+    let count = 0, steps = 70;
     const timer = setInterval(() => {
       count++;
-      const val = (count / steps) * target;
-      numEl.textContent = isDecimal
-        ? val.toFixed(1) + suffix
-        : Math.floor(val).toLocaleString() + suffix;
-      if (count >= steps) {
-        numEl.textContent = isDecimal
-          ? target.toFixed(1) + suffix
-          : target.toLocaleString() + suffix;
-        clearInterval(timer);
-      }
-    }, duration / steps);
+      const v = (count / steps) * tgt;
+      el.textContent = tgt % 1 !== 0 ? v.toFixed(1) + sfx : Math.floor(v).toLocaleString() + sfx;
+      if (count >= steps) { el.textContent = tgt % 1 !== 0 ? tgt.toFixed(1) + sfx : tgt.toLocaleString() + sfx; clearInterval(timer); }
+    }, 1800 / steps);
   });
-}
-
-const statsObserver = new IntersectionObserver(entries => {
-  if (entries[0].isIntersecting) {
-    runCounters();
-    statsObserver.disconnect();
-  }
+  so.disconnect();
 }, { threshold: 0.3 });
-const statsSec = document.querySelector('.stats-sec');
-if (statsSec) statsObserver.observe(statsSec);
+const statsBand = document.querySelector('.stats-band');
+if (statsBand) so.observe(statsBand);
 
-// ── TESTIMONIALS SCROLL ──
-const testiScroll = document.getElementById('testiScroll');
-const tPrev       = document.getElementById('tPrev');
-const tNext       = document.getElementById('tNext');
-let testiIndex    = 0;
-
-function getTestiCols() {
-  return window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
-}
-
-function updateTesti() {
-  const cards  = testiScroll.querySelectorAll('.tc');
-  const cols   = getTestiCols();
-  const maxIdx = Math.max(0, Math.ceil(cards.length / cols) - 1);
-  testiIndex   = Math.max(0, Math.min(testiIndex, maxIdx));
-
-  // Change grid visibility
-  cards.forEach((c, i) => {
-    const page = Math.floor(i / cols);
-    c.style.display = page === testiIndex ? '' : 'none';
-  });
-}
-
-updateTesti();
-tPrev.addEventListener('click', () => { testiIndex--; updateTesti(); });
-tNext.addEventListener('click', () => { testiIndex++; updateTesti(); });
-window.addEventListener('resize', updateTesti);
-
-// ── APPOINTMENT → WHATSAPP ──
-const bookBtn = document.getElementById('bookBtn');
-if (bookBtn) {
-  bookBtn.addEventListener('click', () => {
-    const name     = document.getElementById('apptName').value.trim();
-    const age      = document.getElementById('apptAge').value.trim();
-    const gender   = document.getElementById('apptGender').value;
-    const phone    = document.getElementById('apptPhone').value.trim();
-    const dept     = document.getElementById('apptDept').value;
-    const date     = document.getElementById('apptDate').value;
-    const time     = document.getElementById('apptTime').value;
-    const symptoms = document.getElementById('apptSymptoms').value.trim();
-
-    if (!name || !phone || !dept) {
-      // Shake the empty fields
-      ['apptName','apptPhone','apptDept'].forEach(id => {
-        const el = document.getElementById(id);
-        if (!el.value.trim()) {
-          el.style.borderColor = '#dc2626';
-          el.style.boxShadow   = '0 0 0 3px rgba(220,38,38,0.15)';
-          setTimeout(() => {
-            el.style.borderColor = '';
-            el.style.boxShadow   = '';
-          }, 2000);
-        }
-      });
-      return;
-    }
-
-    const msg =
-`🏥 *Appointment Request — Dr. Sarojdhara Hospital*
-
-👤 *Patient Name:* ${name}
-🎂 *Age:* ${age || 'Not mentioned'} | *Gender:* ${gender || 'Not mentioned'}
-📞 *WhatsApp:* ${phone}
-🩺 *Concern / Department:* ${dept}
-📅 *Preferred Date:* ${date || 'Flexible'}
-⏰ *Time Slot:* ${time || 'Any available'}
-📝 *Symptoms / Notes:* ${symptoms || 'Not provided'}
-
-_Please confirm my appointment at the earliest. Thank you!_
-_Dr. Sarojdhara Hospital, Shikargah, Jodhpur_`;
-
-    window.open(`https://wa.me/919829888702?text=${encodeURIComponent(msg)}`, '_blank');
-  });
-}
-
-// ── BACK TO TOP ──
-backTop.addEventListener('click', () =>
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-);
-
-// ── ACTIVE NAV LINK on SCROLL ──
+// ── ACTIVE NAV ──
 const sections = document.querySelectorAll('section[id]');
-const navLinks  = document.querySelectorAll('.nm-link');
-
 window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(sec => {
-    if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
-  });
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === '#' + current) {
-      link.classList.add('active');
-    }
+  let cur = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
+  document.querySelectorAll('.nl').forEach(l => {
+    l.classList.toggle('active', l.getAttribute('href') === '#' + cur);
   });
 });
 
-// ── ADD ACTIVE NAV STYLE ──
-const navStyle = document.createElement('style');
-navStyle.textContent = `.nm-link.active { color: #fff !important; background: rgba(255,255,255,0.12) !important; }`;
-document.head.appendChild(navStyle);
+// ── APPOINTMENT WHATSAPP ──
+document.getElementById('bookBtn').addEventListener('click', () => {
+  const name  = document.getElementById('apptName').value.trim();
+  const phone = document.getElementById('apptPhone').value.trim();
+  const dept  = document.getElementById('apptDept').value;
+  if (!name || !phone || !dept) {
+    ['apptName','apptPhone','apptDept'].forEach(id => {
+      const el = document.getElementById(id);
+      if (!el.value.trim()) { el.style.borderColor = '#dc2626'; setTimeout(() => { el.style.borderColor = ''; }, 2000); }
+    });
+    return;
+  }
+  const age      = document.getElementById('apptAge').value.trim();
+  const gender   = document.getElementById('apptGender').value;
+  const date     = document.getElementById('apptDate').value;
+  const time     = document.getElementById('apptTime').value;
+  const symptoms = document.getElementById('apptSymptoms').value.trim();
+  const msg =
+`🏥 *Appointment Request — Dr. Sarojdhara Hospital*
+
+👤 *Name:* ${name}
+🎂 *Age:* ${age || 'N/A'} | *Gender:* ${gender || 'N/A'}
+📞 *WhatsApp:* ${phone}
+🩺 *Concern:* ${dept}
+📅 *Date:* ${date || 'Flexible'}
+⏰ *Slot:* ${time || 'Any'}
+📝 *Notes:* ${symptoms || 'None'}
+
+_Please confirm my appointment. Thank you!_
+_Dr. Sarojdhara Hospital, Shikargah, Jodhpur_`;
+  window.open(`https://wa.me/919829888702?text=${encodeURIComponent(msg)}`, '_blank');
+});
+
+// ── BACK TO TOP ──
+topFab.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));

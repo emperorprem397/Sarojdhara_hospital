@@ -3,267 +3,311 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Dr. Sarojdhara Hospital – Jodhpur's most trusted maternity, gynecology & fetal care center. Expert care by Dr. Dharasingh."/>
-  <title>Dr. Sarojdhara Hospital | Maternity & Fetal Care – Jodhpur</title>
-  <link rel="icon" type="image/png" href="images/doctor-profile.jpg"/>
+  <meta name="description" content="Dr. Sarojdhara Hospital – Jodhpur's trusted maternity, gynecology & fetal care center. HEALING. TRUST. TRUTHFULNESS."/>
+  <title>Dr. Sarojdhara Hospital | Jodhpur</title>
+  <link rel="icon" type="image/png" href="images/logo.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
-<div class="cursor-glow" id="cursorGlow"></div>
-
-<!-- NAVBAR -->
+<!-- ════════════════════════════════
+     NAVBAR — clean white
+════════════════════════════════ -->
 <nav class="navbar" id="navbar">
-  <div class="nav-wrap">
-    <a href="#home" class="nav-brand">
-      <span class="brand-cross"><i class="fas fa-plus"></i></span>
-      <span class="brand-text">
-        <span class="brand-main">Dr. Sarojdhara</span>
-        <span class="brand-sub">Hospital</span>
-      </span>
+  <div class="nav-inner">
+
+    <a href="#home" class="nav-logo">
+      <img src="images/logo.png" alt="Dr. Sarojdhara Hospital Logo" class="logo-img"/>
+      <div class="logo-text">
+        <span class="logo-name">Dr. Sarojdhara</span>
+        <span class="logo-sub">Hospital</span>
+      </div>
     </a>
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="#home" class="nm-link">Home</a></li>
-      <li><a href="#services" class="nm-link">Services</a></li>
-      <li><a href="#doctor" class="nm-link">Doctor</a></li>
-      <li><a href="#gallery" class="nm-link">Gallery</a></li>
-      <li><a href="#reviews" class="nm-link">Reviews</a></li>
-      <li><a href="#contact" class="nm-link">Contact</a></li>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"         class="nl">Home</a></li>
+      <li><a href="#specialities" class="nl">Specialities</a></li>
+      <li><a href="#doctor"       class="nl">Find a Doctor</a></li>
+      <li><a href="#appointment"  class="nl">Appointments</a></li>
+      <li><a href="#about"        class="nl">About Us</a></li>
+      <li><a href="#contact"      class="nl">Contact Us</a></li>
     </ul>
-    <div class="nav-right">
-      <a href="tel:02912941844" class="nav-call"><i class="fas fa-phone"></i> 0291-2941844</a>
-      <a href="#appointment" class="nav-book">Book Now <i class="fas fa-arrow-right"></i></a>
-      <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
+
+    <div class="nav-actions">
+      <a href="#appointment" class="nav-book-btn">
+        <i class="fas fa-calendar-check"></i> Book Appointment
+      </a>
+      <button class="burger" id="burger"><span></span><span></span><span></span></button>
     </div>
+
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- ════════════════════════════════
+     HERO — exact reference match
+════════════════════════════════ -->
 <section class="hero" id="home">
+
   <div class="hero-bg">
-    <img src="images/hero-handshake.jpg" alt="Trusted doctor patient care" class="hero-bg-img"/>
-    <div class="hero-bg-overlay"></div>
+    <img src="images/hero-doctor.jpg" alt="Dr. Sarojdhara Hospital Doctor" class="hero-img"/>
+    <div class="hero-overlay"></div>
   </div>
-  <div class="hero-tag t1"><i class="fas fa-star"></i> 4.8 Rated</div>
-  <div class="hero-tag t2"><i class="fas fa-baby"></i> 10,000+ Deliveries</div>
-  <div class="hero-tag t3"><i class="fas fa-shield-alt"></i> 15+ Years</div>
-  <div class="hero-float-card fc-left">
-    <div class="fc-icon"><i class="fas fa-heartbeat"></i></div>
-    <div class="fc-data">
-      <span class="fc-big">4.9/5</span>
-      <span class="fc-label">Most Trusted<br/>Hospital Jodhpur</span>
-    </div>
-    <span class="fc-arrow">↗</span>
-  </div>
-  <div class="hero-float-card fc-right">
-    <div class="fc-top-label">Smart Way To</div>
-    <div class="fc-sub-label">Enhance Your Health</div>
-    <div class="fc-mini-icon"><i class="fas fa-heart"></i></div>
-  </div>
-  <div class="hero-content">
-    <div class="hero-eyebrow"><span class="eyebrow-dot"></span>Jodhpur's Premier Maternity Centre</div>
-    <h1 class="hero-h1">
-      <span class="h1-line1">Trusted</span>
-      <span class="h1-italic">Care for</span>
-      <span class="h1-big">Every<br/>Mother</span>
-    </h1>
-    <p class="hero-para">Compassionate gynecology, safe deliveries &amp; advanced fetal care — backed by <strong>15+ years</strong> of expertise in the heart of Jodhpur.</p>
-    <div class="hero-actions">
-      <a href="#appointment" class="ha-primary"><span>Book Appointment</span><span class="ha-arrow"><i class="fas fa-arrow-right"></i></span></a>
-      <a href="https://wa.me/919829888702" target="_blank" class="ha-wa"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
-    </div>
-  </div>
-  <div class="hero-scroll"><span class="hs-label">Scroll</span><span class="hs-line"></span></div>
-</section>
 
-<!-- MARQUEE -->
-<div class="marquee-strip">
-  <div class="marquee-track">
-    <span>✦ Maternity Care</span><span>✦ Safe Deliveries</span><span>✦ 3D / 4D Sonography</span><span>✦ Laparoscopic Surgery</span><span>✦ NICU Care</span><span>✦ Free Sonography</span><span>✦ PCOS Treatment</span><span>✦ 24/7 Emergency</span>
-    <span>✦ Maternity Care</span><span>✦ Safe Deliveries</span><span>✦ 3D / 4D Sonography</span><span>✦ Laparoscopic Surgery</span><span>✦ NICU Care</span><span>✦ Free Sonography</span><span>✦ PCOS Treatment</span><span>✦ 24/7 Emergency</span>
-  </div>
-</div>
+  <div class="hero-body">
 
-<!-- STATS -->
-<section class="stats-sec">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item" data-target="10000" data-suffix="+"><span class="si-num">0</span><span class="si-label">Safe Deliveries</span><span class="si-bar"></span></div>
-      <div class="stat-item" data-target="15" data-suffix="+"><span class="si-num">0</span><span class="si-label">Years Experience</span><span class="si-bar"></span></div>
-      <div class="stat-item" data-text="4.8★"><span class="si-num">—</span><span class="si-label">Google Rating</span><span class="si-bar"></span></div>
-      <div class="stat-item" data-target="50000" data-suffix="+"><span class="si-num">0</span><span class="si-label">Patients Treated</span><span class="si-bar"></span></div>
+    <div class="hero-text">
+      <p class="hero-tagline">Your Wellness, Our Commitment.</p>
+
+      <h1 class="hero-h1">
+        <span class="h1-dark">HEALING. TRUST.</span>
+        <span class="h1-teal">TRUTHFULNESS.</span>
+      </h1>
+
+      <div class="hero-divider"></div>
+
+      <p class="hero-hospital-name">Dr. Sarojdhara Hospital, Jodhpur</p>
+
+      <a href="#appointment" class="hero-cta">
+        <i class="fas fa-calendar-alt"></i> Schedule a Visit
+      </a>
     </div>
-  </div>
-</section>
 
-<!-- ABOUT -->
-<section class="about-sec" id="about">
-  <div class="container">
-    <div class="about-split">
-      <div class="about-left">
-        <div class="section-eyebrow">About the Hospital</div>
-        <h2 class="section-title-xl">Where Every<br/><em>Life Begins</em><br/>With Care</h2>
-        <div class="title-underline"></div>
-        <p class="body-text">Dr. Sarojdhara Hospital has been a beacon of quality maternity and women's healthcare in Jodhpur's Shikargah area. We combine clinical excellence with heartfelt compassion — because every patient deserves both.</p>
-        <div class="about-chips">
-          <span><i class="fas fa-check"></i> JSY Govt. Empanelled</span>
-          <span><i class="fas fa-check"></i> Free Sonography</span>
-          <span><i class="fas fa-check"></i> 24/7 Emergency</span>
-          <span><i class="fas fa-check"></i> Modern NICU</span>
+    <!-- Bottom quick-info bar exactly like reference -->
+    <div class="hero-info-bar">
+      <div class="hib-item">
+        <div class="hib-icon"><i class="fas fa-clock"></i></div>
+        <div class="hib-text">
+          <strong>Emergency Care</strong>
+          <span>(24/7)</span>
         </div>
-        <a href="#services" class="link-arrow">Explore Services <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="about-right">
-        <div class="about-img-stack">
-          <img src="images/hospital-day.jpg" alt="Dr. Sarojdhara Hospital Jodhpur" class="about-img-main"/>
-          <img src="images/hospital-reception.jpg" alt="Hospital Reception" class="about-img-thumb"/>
-          <div class="about-badge"><i class="fas fa-award"></i><span>Jodhpur's<br/><strong>Most Trusted</strong></span></div>
+      <div class="hib-divider"></div>
+      <div class="hib-item">
+        <div class="hib-icon"><i class="fas fa-user-md"></i></div>
+        <div class="hib-text">
+          <strong>Our Specialities</strong>
+          <span>Expert Care</span>
+        </div>
+      </div>
+      <div class="hib-divider"></div>
+      <div class="hib-item">
+        <div class="hib-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="hib-text">
+          <strong>Insurance Accepted</strong>
+          <span>Hassle-free Treatment</span>
+        </div>
+      </div>
+      <div class="hib-divider"></div>
+      <div class="hib-item">
+        <div class="hib-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="hib-text">
+          <strong>Find a Doctor</strong>
+          <span>Book Your Appointment</span>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="services-sec" id="services">
+<!-- ════════════════════════════════
+     ABOUT
+════════════════════════════════ -->
+<section class="section about-sec" id="about">
   <div class="container">
-    <div class="sec-head-split">
-      <div>
-        <div class="section-eyebrow">Our Specialties</div>
-        <h2 class="section-title-xl">Comprehensive<br/><em>Healthcare</em> Services</h2>
-      </div>
-      <p class="sec-head-desc">From prenatal care to advanced surgery — complete women's healthcare under one roof in Jodhpur.</p>
-    </div>
-    <div class="services-bento">
-      <div class="sb-card sb-large" style="--card-color:#0369a1">
-        <div class="sbc-top"><div class="sbc-icon"><i class="fas fa-baby-carriage"></i></div><span class="sbc-tag">Most Visited</span></div>
-        <h3>Normal &amp; C-Section<br/>Delivery</h3>
-        <p>Safe, monitored deliveries with expert obstetric support and state-of-the-art OT.</p>
-        <div class="sbc-footer">Maternity · Surgery</div>
-      </div>
-      <div class="sb-card" style="--card-color:#0d9488">
-        <div class="sbc-icon"><i class="fas fa-female"></i></div>
-        <h3>Gynecology &amp; Obstetrics</h3>
-        <p>Complete care for women's reproductive health — PCOS, menstrual disorders, complex surgeries.</p>
-        <div class="sbc-footer">Gynecology · Surgery</div>
-      </div>
-      <div class="sb-card" style="--card-color:#7c3aed">
-        <div class="sbc-icon"><i class="fas fa-ultrasound"></i></div>
-        <h3>Sonography 2D, 3D &amp; 4D</h3>
-        <p>Advanced ultrasound imaging. <strong>Free sonography</strong> for eligible patients.</p>
-        <div class="sbc-footer">Diagnostics · Free</div>
-      </div>
-      <div class="sb-card" style="--card-color:#dc2626">
-        <div class="sbc-icon"><i class="fas fa-procedures"></i></div>
-        <h3>Laparoscopic Surgery</h3>
-        <p>Minimally invasive procedures — fibroid removal, ovarian cysts, hysterectomy.</p>
-        <div class="sbc-footer">Surgical · Minimal Invasive</div>
-      </div>
-      <div class="sb-card" style="--card-color:#059669">
-        <div class="sbc-icon"><i class="fas fa-baby"></i></div>
-        <h3>Newborn &amp; NICU Care</h3>
-        <p>Specialized neonatal intensive care for premature and critical newborns. 24/7 support.</p>
-        <div class="sbc-footer">Neonatal · NICU</div>
-      </div>
-      <div class="sb-card sb-wide" style="--card-color:#f59e0b">
-        <div class="sbc-icon"><i class="fas fa-ambulance"></i></div>
-        <h3>24/7 Emergency Care</h3>
-        <p>Round-the-clock emergency delivery suite and critical care line. We're always here when you need us most.</p>
-        <div class="sbc-footer">Emergency · Always Open</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DOCTOR -->
-<section class="doctor-sec" id="doctor">
-  <div class="container">
-    <div class="doctor-layout">
-      <div class="dr-img-col">
-        <div class="dr-img-wrap">
-          <img src="images/doctor-profile.jpg" alt="Dr. Dharasingh Gynecologist Jodhpur" class="dr-photo"/>
-          <div class="dr-img-ring"></div>
-          <div class="dr-cred-card">
-            <img src="images/doctor-profile.jpg" alt="Dr. Dharasingh" class="dcc-thumb"/>
-            <div><strong>Dr. Dharasingh</strong><span>MBBS, MS – Gynae &amp; Obs</span></div>
-            <span class="dcc-badge">✓ Verified</span>
+    <div class="about-grid">
+      <div class="about-img-col">
+        <div class="about-img-wrap">
+          <img src="images/hospital-day.jpg" alt="Dr. Sarojdhara Hospital Jodhpur" class="about-main-img"/>
+          <img src="images/hospital-reception.jpg" alt="Hospital Reception" class="about-sub-img"/>
+          <div class="about-years-badge">
+            <span class="ayb-num">15+</span>
+            <span class="ayb-label">Years of<br/>Excellence</span>
           </div>
         </div>
-        <div class="dr-watermark">Dr.</div>
       </div>
-      <div class="dr-info-col">
-        <div class="section-eyebrow">Meet Your Doctor</div>
-        <h2 class="doctor-name-heading">Dr. Sarojdhara<br/><span class="doctor-name-italic">Dharasingh</span></h2>
-        <p class="doctor-degree">MBBS, MS — Gynecology &amp; Obstetrics Specialist</p>
-        <div class="dr-divider-line"></div>
-        <p class="body-text">One of Jodhpur's most trusted gynecologists with over <strong>15 years</strong> of dedicated service. Expert in high-risk pregnancies, advanced laparoscopic surgeries, and compassionate, evidence-based women's healthcare.</p>
-        <div class="dr-expertise-list">
-          <div class="del-item"><span class="del-dot"></span>High-Risk Pregnancy Management</div>
-          <div class="del-item"><span class="del-dot"></span>Laparoscopic &amp; Open Surgery</div>
-          <div class="del-item"><span class="del-dot"></span>Normal &amp; C-Section Delivery</div>
-          <div class="del-item"><span class="del-dot"></span>PCOS, Infertility &amp; Endometriosis</div>
-          <div class="del-item"><span class="del-dot"></span>Neonatal &amp; NICU Care</div>
-          <div class="del-item"><span class="del-dot"></span>Family Planning &amp; Sterilization</div>
+      <div class="about-content">
+        <span class="eyebrow">About the Hospital</span>
+        <h2 class="section-h2">Where Every Life<br/>Begins <em>With Care</em></h2>
+        <div class="h2-line"></div>
+        <p class="sec-body">Dr. Sarojdhara Hospital has been a beacon of quality maternity and women's healthcare in Jodhpur's Shikargah area for over 15 years. We combine clinical excellence with heartfelt compassion — because every patient deserves both.</p>
+        <div class="about-tags">
+          <span><i class="fas fa-check-circle"></i> JSY Govt. Empanelled</span>
+          <span><i class="fas fa-check-circle"></i> Free Sonography</span>
+          <span><i class="fas fa-check-circle"></i> 24/7 Emergency</span>
+          <span><i class="fas fa-check-circle"></i> Modern NICU</span>
         </div>
-        <div class="dr-timing-box">
-          <div class="dtb-row"><span><i class="fas fa-sun"></i> Morning OPD</span><strong>10:00 AM – 2:00 PM</strong></div>
-          <div class="dtb-row"><span><i class="fas fa-moon"></i> Evening OPD</span><strong>6:00 PM – 9:00 PM</strong></div>
-          <div class="dtb-row emg"><span><i class="fas fa-ambulance"></i> Emergency</span><strong>24 / 7</strong></div>
+        <a href="#specialities" class="text-link">Explore Specialities <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     STATS
+════════════════════════════════ -->
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-row">
+      <div class="s-item" data-target="10000" data-suffix="+">
+        <span class="s-num">0</span><span class="s-label">Safe Deliveries</span>
+      </div>
+      <div class="s-item" data-target="15" data-suffix="+">
+        <span class="s-num">0</span><span class="s-label">Years Experience</span>
+      </div>
+      <div class="s-item" data-text="4.8★">
+        <span class="s-num">—</span><span class="s-label">Google Rating</span>
+      </div>
+      <div class="s-item" data-target="50000" data-suffix="+">
+        <span class="s-num">0</span><span class="s-label">Patients Treated</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     SPECIALITIES
+════════════════════════════════ -->
+<section class="section spec-sec" id="specialities">
+  <div class="container">
+    <div class="sec-head center">
+      <span class="eyebrow">Our Specialities</span>
+      <h2 class="section-h2">Comprehensive <em>Healthcare</em> Services</h2>
+      <p class="sec-sub">From prenatal care to advanced surgery — complete women's healthcare under one roof.</p>
+    </div>
+    <div class="spec-grid">
+      <div class="spec-card rv">
+        <div class="sc-icon" style="--c:#0369a1"><i class="fas fa-baby-carriage"></i></div>
+        <h3>Normal &amp; C-Section Delivery</h3>
+        <p>Safe, monitored deliveries with expert obstetric support and state-of-the-art operation theatre.</p>
+        <span class="sc-tag">Maternity · Surgery</span>
+      </div>
+      <div class="spec-card rv">
+        <div class="sc-icon" style="--c:#0d9488"><i class="fas fa-female"></i></div>
+        <h3>Gynecology &amp; Obstetrics</h3>
+        <p>Complete care for women's reproductive health — PCOS, menstrual disorders, complex surgeries.</p>
+        <span class="sc-tag">Gynecology · Surgery</span>
+      </div>
+      <div class="spec-card rv">
+        <div class="sc-icon" style="--c:#7c3aed"><i class="fas fa-ultrasound"></i></div>
+        <h3>Sonography 2D, 3D &amp; 4D</h3>
+        <p>Advanced ultrasound imaging with <strong>free sonography</strong> available for eligible patients.</p>
+        <span class="sc-tag">Diagnostics · Free</span>
+      </div>
+      <div class="spec-card rv">
+        <div class="sc-icon" style="--c:#dc2626"><i class="fas fa-procedures"></i></div>
+        <h3>Laparoscopic Surgery</h3>
+        <p>Minimally invasive procedures — fibroid removal, ovarian cysts, hysterectomy with fast recovery.</p>
+        <span class="sc-tag">Surgical · Minimal Invasive</span>
+      </div>
+      <div class="spec-card rv">
+        <div class="sc-icon" style="--c:#059669"><i class="fas fa-baby"></i></div>
+        <h3>Newborn &amp; NICU Care</h3>
+        <p>Specialized neonatal intensive care for premature and critical newborns with 24/7 support.</p>
+        <span class="sc-tag">Neonatal · NICU</span>
+      </div>
+      <div class="spec-card rv">
+        <div class="sc-icon" style="--c:#f59e0b"><i class="fas fa-ambulance"></i></div>
+        <h3>24/7 Emergency Care</h3>
+        <p>Round-the-clock emergency delivery suite and critical care. We're always here when you need us.</p>
+        <span class="sc-tag">Emergency · Always Open</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     DOCTOR
+════════════════════════════════ -->
+<section class="section doctor-sec" id="doctor">
+  <div class="container">
+    <div class="doctor-grid">
+      <div class="doc-img-col">
+        <div class="doc-img-frame">
+          <img src="images/doctor-profile.jpg" alt="Dr. Dharasingh – Gynecologist Jodhpur" class="doc-photo"/>
+          <div class="doc-verified">
+            <i class="fas fa-award"></i>
+            <span>MBBS, MS (Gynae &amp; Obs)</span>
+          </div>
         </div>
-        <div class="dr-cta-row">
-          <a href="#appointment" class="ha-primary">Book Consultation <i class="fas fa-arrow-right"></i></a>
-          <a href="tel:02912941844" class="ha-ghost"><i class="fas fa-phone"></i> Call Now</a>
+      </div>
+      <div class="doc-info">
+        <span class="eyebrow">Meet Your Doctor</span>
+        <h2 class="section-h2">Dr. Sarojdhara<br/><em>Dharasingh</em></h2>
+        <p class="doc-degree">MBBS, MS — Gynecology &amp; Obstetrics Specialist</p>
+        <div class="h2-line"></div>
+        <p class="sec-body">One of Jodhpur's most trusted gynecologists with over <strong>15 years</strong> of dedicated service. Expert in high-risk pregnancies, advanced laparoscopic surgeries, and compassionate women's healthcare.</p>
+        <div class="doc-skills">
+          <div class="ds-item"><i class="fas fa-circle-dot"></i> High-Risk Pregnancy</div>
+          <div class="ds-item"><i class="fas fa-circle-dot"></i> Laparoscopic Surgery</div>
+          <div class="ds-item"><i class="fas fa-circle-dot"></i> Normal &amp; C-Section Delivery</div>
+          <div class="ds-item"><i class="fas fa-circle-dot"></i> PCOS &amp; Infertility</div>
+          <div class="ds-item"><i class="fas fa-circle-dot"></i> Neonatal &amp; NICU Care</div>
+          <div class="ds-item"><i class="fas fa-circle-dot"></i> Family Planning</div>
+        </div>
+        <div class="doc-timing">
+          <div class="dt-row"><i class="fas fa-sun"></i><span>Morning OPD:</span><strong>10:00 AM – 2:00 PM</strong></div>
+          <div class="dt-row"><i class="fas fa-moon"></i><span>Evening OPD:</span><strong>6:00 PM – 9:00 PM</strong></div>
+          <div class="dt-row red"><i class="fas fa-ambulance"></i><span>Emergency:</span><strong>24 / 7</strong></div>
+        </div>
+        <div class="doc-btns">
+          <a href="#appointment" class="btn-primary">Book Consultation</a>
+          <a href="tel:02912941844" class="btn-outline"><i class="fas fa-phone"></i> 0291-2941844</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY -->
+<!-- ════════════════════════════════
+     WHY CHOOSE US
+════════════════════════════════ -->
 <section class="why-sec">
   <div class="container">
-    <div class="why-head">
-      <div class="section-eyebrow light">Why Choose Us</div>
-      <h2 class="section-title-xl light">The Sarojdhara<br/><em>Difference</em></h2>
+    <div class="sec-head center">
+      <span class="eyebrow light">Why Choose Us</span>
+      <h2 class="section-h2 white">The Sarojdhara <em>Difference</em></h2>
     </div>
     <div class="why-grid">
-      <div class="wg-item ri"><span class="wg-num">01</span><div class="wg-icon"><i class="fas fa-shield-alt"></i></div><h3>100% Safe Care</h3><p>Stringent sterilization, expert nursing, round-the-clock monitoring for every mother &amp; baby.</p></div>
-      <div class="wg-item"><span class="wg-num">02</span><div class="wg-icon"><i class="fas fa-microscope"></i></div><h3>Advanced Technology</h3><p>2D, 3D &amp; 4D sonography, digital diagnostics and modern surgical equipment.</p></div>
-      <div class="wg-item"><span class="wg-num">03</span><div class="wg-icon"><i class="fas fa-hand-holding-heart"></i></div><h3>Compassionate Approach</h3><p>We treat every patient like family — warm, supportive environment always.</p></div>
-      <div class="wg-item ri"><span class="wg-num">04</span><div class="wg-icon"><i class="fas fa-rupee-sign"></i></div><h3>Affordable Treatment</h3><p>Quality healthcare for everyone — transparent pricing, free camps &amp; JSY scheme.</p></div>
-      <div class="wg-item"><span class="wg-num">05</span><div class="wg-icon"><i class="fas fa-certificate"></i></div><h3>Govt. Accredited</h3><p>JSY empanelled. Free delivery for eligible beneficiaries under government schemes.</p></div>
-      <div class="wg-item"><span class="wg-num">06</span><div class="wg-icon"><i class="fas fa-ambulance"></i></div><h3>24/7 Emergency</h3><p>Always available — emergency delivery suite and dedicated emergency helpline.</p></div>
+      <div class="wc-card rv"><span class="wc-num">01</span><div class="wc-icon"><i class="fas fa-shield-alt"></i></div><h3>100% Safe Care</h3><p>Expert nursing, stringent sterilization, round-the-clock monitoring for every mother &amp; baby.</p></div>
+      <div class="wc-card rv"><span class="wc-num">02</span><div class="wc-icon"><i class="fas fa-microscope"></i></div><h3>Advanced Technology</h3><p>2D, 3D &amp; 4D sonography, digital diagnostics and modern surgical equipment.</p></div>
+      <div class="wc-card rv"><span class="wc-num">03</span><div class="wc-icon"><i class="fas fa-hand-holding-heart"></i></div><h3>Compassionate Approach</h3><p>We treat every patient like family — warm, supportive environment always.</p></div>
+      <div class="wc-card rv"><span class="wc-num">04</span><div class="wc-icon"><i class="fas fa-rupee-sign"></i></div><h3>Affordable Treatment</h3><p>Transparent pricing, free camps, JSY scheme for eligible patients.</p></div>
+      <div class="wc-card rv"><span class="wc-num">05</span><div class="wc-icon"><i class="fas fa-certificate"></i></div><h3>Govt. Accredited</h3><p>JSY empanelled. Free delivery for eligible beneficiaries under government schemes.</p></div>
+      <div class="wc-card rv"><span class="wc-num">06</span><div class="wc-icon"><i class="fas fa-ambulance"></i></div><h3>24/7 Emergency</h3><p>Emergency delivery suite and dedicated helpline — always available for critical care.</p></div>
     </div>
   </div>
 </section>
 
-<!-- APPOINTMENT -->
-<section class="appt-sec" id="appointment">
+<!-- ════════════════════════════════
+     APPOINTMENT
+════════════════════════════════ -->
+<section class="section appt-sec" id="appointment">
   <div class="container">
     <div class="appt-grid">
-      <div class="appt-left">
-        <div class="section-eyebrow">Book Appointment</div>
-        <h2 class="section-title-xl">Schedule Your<br/><em>Consultation</em><br/>Today</h2>
-        <p class="body-text">Fill your details below. We'll prepare a personalised WhatsApp message to confirm your appointment directly with the hospital.</p>
+      <div class="appt-info">
+        <span class="eyebrow">Book Appointment</span>
+        <h2 class="section-h2">Schedule Your<br/><em>Consultation</em> Today</h2>
+        <p class="sec-body">Fill your details below. We'll send a personalised WhatsApp message to confirm your appointment directly with the hospital.</p>
         <div class="appt-perks">
-          <div class="ap-item"><i class="fas fa-bolt"></i> Same-day appointments</div>
-          <div class="ap-item"><i class="fas fa-lock"></i> No hidden charges</div>
-          <div class="ap-item"><i class="fab fa-whatsapp"></i> Instant WhatsApp confirmation</div>
+          <div class="ap"><i class="fas fa-bolt"></i> Same-day appointments available</div>
+          <div class="ap"><i class="fas fa-lock"></i> No hidden charges</div>
+          <div class="ap"><i class="fab fa-whatsapp"></i> Instant WhatsApp confirmation</div>
         </div>
-        <div class="appt-timing">
-          <div class="at-row"><i class="fas fa-clock"></i><span>Mon–Sat: 10AM–2PM &amp; 6PM–9PM</span></div>
-          <div class="at-row emg"><i class="fas fa-exclamation-circle"></i><span>Emergency: 24/7 Available</span></div>
+        <div class="appt-times">
+          <div class="at"><i class="fas fa-clock"></i><span>Mon–Sat: 10AM–2PM &amp; 6PM–9PM</span></div>
+          <div class="at red"><i class="fas fa-exclamation-circle"></i><span>Emergency: 24/7 Available</span></div>
         </div>
       </div>
-      <div class="appt-right">
-        <div class="appt-form-card">
+      <div class="appt-form-wrap">
+        <div class="appt-card">
           <h3><i class="fas fa-calendar-plus"></i> Patient Details</h3>
           <div class="fg"><label>Full Name *</label><input type="text" id="apptName" placeholder="Your full name"/></div>
-          <div class="fg-row">
-            <div class="fg"><label>Age *</label><input type="number" id="apptAge" placeholder="Age" min="1" max="100"/></div>
+          <div class="fg-2">
+            <div class="fg"><label>Age *</label><input type="number" id="apptAge" placeholder="Age" min="1" max="110"/></div>
             <div class="fg"><label>Gender</label><select id="apptGender"><option value="">Select</option><option>Female</option><option>Male</option><option>Other</option></select></div>
           </div>
           <div class="fg"><label>Phone / WhatsApp *</label><input type="tel" id="apptPhone" placeholder="10-digit number"/></div>
@@ -278,153 +322,155 @@
               <option>General Checkup</option><option>Emergency</option>
             </select>
           </div>
-          <div class="fg-row">
+          <div class="fg-2">
             <div class="fg"><label>Preferred Date</label><input type="date" id="apptDate"/></div>
             <div class="fg"><label>Time Slot</label><select id="apptTime"><option value="">Any slot</option><option>Morning (10AM-2PM)</option><option>Evening (6PM-9PM)</option></select></div>
           </div>
           <div class="fg"><label>Symptoms / Notes</label><textarea id="apptSymptoms" rows="3" placeholder="Describe your symptoms briefly..."></textarea></div>
-          <button class="appt-wa-btn" id="bookBtn"><i class="fab fa-whatsapp"></i> Send via WhatsApp &amp; Book</button>
-          <p class="form-note">Your details will be sent directly to the hospital via WhatsApp.</p>
+          <button class="wa-book-btn" id="bookBtn"><i class="fab fa-whatsapp"></i> Send via WhatsApp &amp; Book</button>
+          <p class="form-note">Your details will be sent directly to the hospital via WhatsApp for confirmation.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="gallery-sec" id="gallery">
+<!-- ════════════════════════════════
+     GALLERY
+════════════════════════════════ -->
+<section class="section gallery-sec" id="gallery">
   <div class="container">
-    <div class="sec-head-centered">
-      <div class="section-eyebrow">Our Facility</div>
-      <h2 class="section-title-xl">A Look Inside<br/><em>Our Hospital</em></h2>
+    <div class="sec-head center">
+      <span class="eyebrow">Our Facility</span>
+      <h2 class="section-h2">A Look Inside <em>Our Hospital</em></h2>
     </div>
-    <div class="gallery-masonry">
-      <div class="gm-item gm-tall"><img src="images/hospital-day.jpg" alt="Dr. Sarojdhara Hospital Day View"/><div class="gm-label">Main Building</div></div>
-      <div class="gm-item"><img src="images/hospital-night.jpg" alt="Hospital Night View"/><div class="gm-label">Hospital at Night</div></div>
-      <div class="gm-item"><img src="images/hospital-reception.jpg" alt="Hospital Reception"/><div class="gm-label">Reception &amp; OPD</div></div>
-      <div class="gm-item"><img src="images/doctor1.jpg" alt="Doctor Consulting"/><div class="gm-label">Doctor's Cabin</div></div>
-      <div class="gm-item"><img src="images/hero-handshake.jpg" alt="Doctor Patient Trust"/><div class="gm-label">Patient Care</div></div>
+    <div class="gallery-grid">
+      <div class="g-item g-tall rv"><img src="images/hospital-day.jpg" alt="Hospital Day View"/><div class="g-cap">Main Building</div></div>
+      <div class="g-item rv"><img src="images/hospital-night.jpg" alt="Hospital Night View"/><div class="g-cap">Hospital at Night</div></div>
+      <div class="g-item rv"><img src="images/hospital-reception.jpg" alt="Reception"/><div class="g-cap">Reception &amp; OPD</div></div>
+      <div class="g-item rv"><img src="images/doctor1.jpg" alt="Doctor Cabin"/><div class="g-cap">Doctor's Cabin</div></div>
+      <div class="g-item rv"><img src="images/hero-doctor.jpg" alt="Doctor Patient Care"/><div class="g-cap">Patient Care</div></div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testi-sec" id="reviews">
+<!-- ════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════ -->
+<section class="section testi-sec" id="reviews">
   <div class="container">
-    <div class="testi-head">
-      <div><div class="section-eyebrow">Patient Reviews</div><h2 class="section-title-xl">Words From<br/><em>Our Patients</em></h2></div>
-      <div class="testi-rating-block">
-        <span class="trb-num">4.8</span>
-        <div class="trb-right">
-          <div class="trb-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-          <span class="trb-label">350+ Google Reviews</span>
-        </div>
+    <div class="sec-head center">
+      <span class="eyebrow">Patient Reviews</span>
+      <h2 class="section-h2">Words From <em>Our Patients</em></h2>
+      <div class="rating-bar">
+        <span class="rb-num">4.8</span>
+        <div><div class="rb-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div><span class="rb-sub">350+ Google Reviews</span></div>
       </div>
     </div>
-    <div class="testi-scroller" id="testiScroll">
-      <div class="tc"><div class="tc-quote">"</div><p>Dr. Dharasingh ne meri delivery ke time poora dhyan rakha. Staff bahut caring tha. Mera beta bilkul healthy hai. Thank you doctor saab!</p><div class="tc-foot"><div class="tc-av">P</div><div><strong>Priya Sharma</strong><span>Normal Delivery</span></div><div class="tc-g"><i class="fab fa-google"></i></div></div></div>
-      <div class="tc"><div class="tc-quote">"</div><p>Sonography bilkul free mein ki gayi. Doctor ne sab detail se samjhaya. Bahut acha hospital hai Jodhpur mein. Highly recommend!</p><div class="tc-foot"><div class="tc-av s">S</div><div><strong>Sunita Devi</strong><span>Free Sonography</span></div><div class="tc-g"><i class="fab fa-google"></i></div></div></div>
-      <div class="tc"><div class="tc-quote">"</div><p>C-section hua tha mera. Operation ke baad recovery bahut fast thi. Poori facility hospital mein hai. Bahut achha experience tha!</p><div class="tc-foot"><div class="tc-av k">K</div><div><strong>Kavita Rathore</strong><span>C-Section Delivery</span></div><div class="tc-g"><i class="fab fa-google"></i></div></div></div>
-      <div class="tc"><div class="tc-quote">"</div><p>PCOS ke liye aai thi. Dr. Dharasingh ne achhi treatment di. Ab theek hoon. Fees bhi reasonable thi. Bahut recommend karti hoon!</p><div class="tc-foot"><div class="tc-av r">R</div><div><strong>Rekha Joshi</strong><span>Gynecology</span></div><div class="tc-g"><i class="fab fa-google"></i></div></div></div>
-      <div class="tc"><div class="tc-quote">"</div><p>Naya baccha premature tha. NICU mein raha. Doctors ne bahut achhe se care ki. Aaj mera beta 2 saal ka hai bilkul healthy!</p><div class="tc-foot"><div class="tc-av m">M</div><div><strong>Mamta Kumari</strong><span>NICU Care</span></div><div class="tc-g"><i class="fab fa-google"></i></div></div></div>
-    </div>
-    <div class="testi-nav-row">
-      <button class="tnb" id="tPrev"><i class="fas fa-arrow-left"></i></button>
-      <button class="tnb" id="tNext"><i class="fas fa-arrow-right"></i></button>
+    <div class="testi-grid" id="testiGrid">
+      <div class="tc rv"><div class="tc-q">"</div><p>Dr. Dharasingh ne meri delivery ke time poora dhyan rakha. Staff bahut caring tha. Mera beta bilkul healthy hai. Bahut shukriya!</p><div class="tc-foot"><div class="tc-av">P</div><div><strong>Priya Sharma</strong><span>Normal Delivery</span></div><i class="fab fa-google tc-g"></i></div></div>
+      <div class="tc rv"><div class="tc-q">"</div><p>Sonography bilkul free mein ki gayi. Doctor ne sab detail se samjhaya. Bahut acha hospital hai Jodhpur mein. Highly recommend!</p><div class="tc-foot"><div class="tc-av s">S</div><div><strong>Sunita Devi</strong><span>Free Sonography</span></div><i class="fab fa-google tc-g"></i></div></div>
+      <div class="tc rv"><div class="tc-q">"</div><p>C-section operation ke baad recovery bahut fast thi. Doctor saab ki experience clearly dikh rahi thi. Poori facility available hai.</p><div class="tc-foot"><div class="tc-av k">K</div><div><strong>Kavita Rathore</strong><span>C-Section</span></div><i class="fab fa-google tc-g"></i></div></div>
+      <div class="tc rv"><div class="tc-q">"</div><p>PCOS ke liye aai thi. Pehle bahut pareshaan thi lekin Dr. Dharasingh ne achhi treatment di. Ab theek hoon. Reasonable fees bhi hai!</p><div class="tc-foot"><div class="tc-av r">R</div><div><strong>Rekha Joshi</strong><span>Gynecology</span></div><i class="fab fa-google tc-g"></i></div></div>
+      <div class="tc rv"><div class="tc-q">"</div><p>Premature baby tha mera. NICU mein raha. Doctors ne bahut achhe se care ki. Aaj mera beta 2 saal ka hai, bilkul healthy!</p><div class="tc-foot"><div class="tc-av m">M</div><div><strong>Mamta Kumari</strong><span>NICU Care</span></div><i class="fab fa-google tc-g"></i></div></div>
+      <div class="tc rv"><div class="tc-q">"</div><p>Bahut hi professional staff aur doctor. Normal delivery ke baad mujhe aur mere baby ko bilkul sahi care mili. Best hospital in Jodhpur!</p><div class="tc-foot"><div class="tc-av n">N</div><div><strong>Neha Vyas</strong><span>Maternity</span></div><i class="fab fa-google tc-g"></i></div></div>
     </div>
   </div>
 </section>
 
-<!-- BLOG -->
-<section class="blog-sec" id="blog">
+<!-- ════════════════════════════════
+     CONTACT
+════════════════════════════════ -->
+<section class="section contact-sec" id="contact">
   <div class="container">
-    <div class="sec-head-split">
-      <div><div class="section-eyebrow">Health Tips</div><h2 class="section-title-xl">From Our<br/><em>Experts</em></h2></div>
-      <p class="sec-head-desc">Guidance for expectant mothers and women's health awareness from Dr. Sarojdhara Hospital.</p>
+    <div class="sec-head center">
+      <span class="eyebrow">Find Us</span>
+      <h2 class="section-h2">Get In <em>Touch</em></h2>
     </div>
-    <div class="blog-cards">
-      <div class="bc bc-feat">
-        <div class="bc-img pink"><i class="fas fa-baby-carriage"></i></div>
-        <div class="bc-body"><span class="bc-tag">Pregnancy</span><h3>9 Things Every Expecting Mother Should Know</h3><p>Nutrition, warning signs, antenatal checkups and what to expect each trimester.</p><div class="bc-meta"><span><i class="fas fa-calendar"></i> Nov 2024</span><span><i class="fas fa-clock"></i> 5 min read</span></div></div>
-      </div>
-      <div class="bc">
-        <div class="bc-img blue"><i class="fas fa-heart"></i></div>
-        <div class="bc-body"><span class="bc-tag">Gynecology</span><h3>Understanding PCOS: Symptoms &amp; Treatment</h3><p>PCOS affects 1 in 10 women. Learn the signs and medical options available.</p><div class="bc-meta"><span><i class="fas fa-calendar"></i> Oct 2024</span><span><i class="fas fa-clock"></i> 4 min read</span></div></div>
-      </div>
-      <div class="bc">
-        <div class="bc-img teal"><i class="fas fa-baby"></i></div>
-        <div class="bc-body"><span class="bc-tag">Newborn</span><h3>First 30 Days: Caring for Your Newborn</h3><p>Essential tips for new parents — feeding, sleep, hygiene and when to seek help.</p><div class="bc-meta"><span><i class="fas fa-calendar"></i> Sep 2024</span><span><i class="fas fa-clock"></i> 6 min read</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact-sec" id="contact">
-  <div class="container">
-    <div class="sec-head-centered"><div class="section-eyebrow">Find Us</div><h2 class="section-title-xl">Get In <em>Touch</em></h2></div>
     <div class="contact-grid">
-      <div class="cg-cards">
-        <div class="cgc clickable" onclick="window.open('https://maps.google.com/?q=Dr.+Sarojdhara+Hospital+Jodhpur','_blank')">
-          <div class="cgc-icon"><i class="fas fa-map-marker-alt"></i></div>
+      <div class="contact-cards">
+        <div class="cc clickable" onclick="window.open('https://maps.google.com/?q=Dr.+Sarojdhara+Hospital+Jodhpur','_blank')">
+          <div class="cc-icon"><i class="fas fa-map-marker-alt"></i></div>
           <div><h4>Address</h4><p>10-5/123, Mini Market, Shikargah, Jodhpur 342003</p></div>
         </div>
-        <div class="cgc clickable" onclick="window.open('tel:02912941844')">
-          <div class="cgc-icon green"><i class="fas fa-phone"></i></div>
-          <div><h4>Call Us</h4><p>0291-2941844</p><span class="cgc-hint">Tap to call</span></div>
+        <div class="cc clickable" onclick="window.open('tel:02912941844')">
+          <div class="cc-icon g"><i class="fas fa-phone"></i></div>
+          <div><h4>Call Us</h4><p>0291-2941844</p><span class="cc-hint">Tap to call</span></div>
         </div>
-        <div class="cgc clickable" onclick="window.open('https://wa.me/919829888702','_blank')">
-          <div class="cgc-icon wa"><i class="fab fa-whatsapp"></i></div>
-          <div><h4>WhatsApp</h4><p>98288-88702</p><span class="cgc-hint">Tap to chat</span></div>
+        <div class="cc clickable" onclick="window.open('https://wa.me/919829888702','_blank')">
+          <div class="cc-icon wa"><i class="fab fa-whatsapp"></i></div>
+          <div><h4>WhatsApp</h4><p>98288-88702</p><span class="cc-hint">Tap to chat</span></div>
         </div>
-        <div class="cgc">
-          <div class="cgc-icon clock"><i class="fas fa-clock"></i></div>
-          <div><h4>OPD Hours</h4><p>Mon–Sat: 10AM–2PM &amp; 6–9PM</p><p class="emg-text">Emergency: 24/7</p></div>
+        <div class="cc">
+          <div class="cc-icon cl"><i class="fas fa-clock"></i></div>
+          <div><h4>OPD Hours</h4><p>Mon–Sat: 10AM–2PM &amp; 6–9PM</p><p class="red-text">Emergency: 24/7</p></div>
         </div>
-        <div class="emergency-bar"><i class="fas fa-phone-volume"></i><span>24/7 Emergency:</span><a href="tel:02912941844">0291-2941844</a></div>
+        <div class="emg-strip"><i class="fas fa-phone-alt"></i><span>24/7 Emergency:</span><a href="tel:02912941844">0291-2941844</a></div>
       </div>
-      <div class="cg-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.9!2d73.0290!3d26.2910!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sDr.+Sarojdhara+Hospital!5e0!3m2!1sen!2sin!4v1700000000000" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy" title="Dr. Sarojdhara Hospital Map"></iframe>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.9!2d73.0290!3d26.2910!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sDr.+Sarojdhara+Hospital!5e0!3m2!1sen!2sin!4v1700000000000" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy" title="Map"></iframe>
         <a href="https://maps.google.com/?q=Dr.+Sarojdhara+Hospital+Jodhpur" target="_blank" class="map-btn"><i class="fas fa-directions"></i> Get Directions</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ════════════════════════════════
+     FOOTER
+════════════════════════════════ -->
 <footer class="footer">
   <div class="footer-top">
     <div class="container">
       <div class="ft-grid">
         <div class="ft-brand">
-          <div class="ft-logo"><span class="ft-cross"><i class="fas fa-plus"></i></span><div><div class="ft-logo-name">Dr. Sarojdhara Hospital</div><div class="ft-logo-sub">Maternity &amp; Fetal Care Centre</div></div></div>
-          <p>Committed to exceptional maternity &amp; women's healthcare in Jodhpur. Trusted by thousands of families.</p>
+          <div class="ft-logo-row">
+            <img src="images/logo.png" alt="Dr. Sarojdhara Hospital" class="ft-logo-img"/>
+            <div><div class="ft-nm">Dr. Sarojdhara Hospital</div><div class="ft-sub">Healing. Trust. Truthfulness.</div></div>
+          </div>
+          <p>Committed to exceptional maternity &amp; women's healthcare in Jodhpur since 2008. Trusted by thousands of families.</p>
           <div class="ft-socials">
             <a href="https://wa.me/919829888702" target="_blank"><i class="fab fa-whatsapp"></i></a>
             <a href="tel:02912941844"><i class="fas fa-phone"></i></a>
-            <a href="https://maps.google.com/?q=Dr.+Sarojdhara+Hospital+Jodhpur" target="_blank"><i class="fab fa-google"></i></a>
+            <a href="https://maps.google.com/?q=Dr.+Sarojdhara+Hospital" target="_blank"><i class="fab fa-google"></i></a>
           </div>
         </div>
-        <div class="ft-links"><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#services">Services</a></li><li><a href="#doctor">About Doctor</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#appointment">Book Appointment</a></li></ul></div>
-        <div class="ft-links"><h4>Services</h4><ul><li><a href="#services">Normal Delivery</a></li><li><a href="#services">C-Section Surgery</a></li><li><a href="#services">Gynecology</a></li><li><a href="#services">Sonography 3D/4D</a></li><li><a href="#services">Laparoscopy</a></li><li><a href="#services">NICU Care</a></li></ul></div>
-        <div class="ft-contact"><h4>Contact</h4>
-          <div class="ftc-row"><i class="fas fa-map-marker-alt"></i><span>10-5/123, Mini Market, Shikargah, Jodhpur 342003</span></div>
-          <div class="ftc-row"><i class="fas fa-phone"></i><a href="tel:02912941844">0291-2941844</a></div>
-          <div class="ftc-row"><i class="fab fa-whatsapp"></i><a href="https://wa.me/919829888702" target="_blank">98288-88702</a></div>
+        <div class="ft-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li><li><a href="#specialities">Specialities</a></li>
+            <li><a href="#doctor">About Doctor</a></li><li><a href="#gallery">Gallery</a></li>
+            <li><a href="#reviews">Reviews</a></li><li><a href="#appointment">Book Appointment</a></li>
+          </ul>
+        </div>
+        <div class="ft-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#specialities">Normal Delivery</a></li><li><a href="#specialities">C-Section Surgery</a></li>
+            <li><a href="#specialities">Gynecology</a></li><li><a href="#specialities">Sonography 3D/4D</a></li>
+            <li><a href="#specialities">Laparoscopy</a></li><li><a href="#specialities">NICU Care</a></li>
+          </ul>
+        </div>
+        <div class="ft-contact">
+          <h4>Contact</h4>
+          <div class="ftc"><i class="fas fa-map-marker-alt"></i><span>10-5/123, Mini Market, Shikargah, Jodhpur 342003</span></div>
+          <div class="ftc"><i class="fas fa-phone"></i><a href="tel:02912941844">0291-2941844</a></div>
+          <div class="ftc"><i class="fab fa-whatsapp"></i><a href="https://wa.me/919829888702" target="_blank">98288-88702</a></div>
           <div class="ft-emg"><i class="fas fa-exclamation-circle"></i> Emergency: 24/7 Available</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="footer-bottom"><div class="container"><p>© 2025 Dr. Sarojdhara Hospital, Jodhpur. All rights reserved.</p><p>Designed with <i class="fas fa-heart"></i> for better healthcare</p></div></div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© 2025 Dr. Sarojdhara Hospital, Jodhpur. All rights reserved.</p>
+      <p>HEALING. TRUST. TRUTHFULNESS.</p>
+    </div>
+  </div>
 </footer>
 
-<div class="sticky-ctas">
-  <a href="tel:02912941844" class="scta call" title="Call"><i class="fas fa-phone"></i><span>Call</span></a>
-  <a href="https://wa.me/919829888702" target="_blank" class="scta wa" title="WhatsApp"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
-  <a href="#appointment" class="scta book" title="Book"><i class="fas fa-calendar-check"></i><span>Book</span></a>
-</div>
-<button class="back-top" id="backTop"><i class="fas fa-chevron-up"></i></button>
+<!-- Single clean call button — bottom right -->
+<a href="tel:02912941844" class="call-fab" title="Call Now"><i class="fas fa-phone"></i></a>
+<button class="top-fab" id="topFab"><i class="fas fa-chevron-up"></i></button>
 
 <script src="js/main.js"></script>
 <script src="js/bot.js"></script>
